@@ -1,13 +1,13 @@
 
-# 📊 Credit Card Fraud Detection with Machine Learning
+# Credit Card Fraud Detection with Machine Learning
 
 **Group Members:** Immaculate, Joan, Bertha, James, John, Evelyne
 
-## 📑 Overview
+## Overview
 
 Credit card fraud is a persistent issue in the financial industry, costing billions globally. With the increase in digital transactions, detecting fraudulent activity in near real-time has become a priority. This project uses machine learning techniques to analyze transaction data and identify potentially fraudulent behavior.
 
-## 🎯 Objectives
+## Objectives
 
 - Analyze and preprocess credit card transaction data.
 - Identify patterns and features that indicate fraudulent transactions.
@@ -16,7 +16,7 @@ Credit card fraud is a persistent issue in the financial industry, costing billi
 - Evaluate model performance using precision, recall, F1-score, and AUC-ROC.
 - Ensure the final model is interpretable and efficient for real-time deployment.
 
-## ❓ Research Questions
+## Research Questions
 
 1. What distinguishing patterns exist between fraudulent and legitimate transactions?
 2. Which machine learning models are most effective for detecting fraud in imbalanced datasets?
@@ -25,7 +25,7 @@ Credit card fraud is a persistent issue in the financial industry, costing billi
 5. Is it feasible to deploy the fraud detection model in near real-time?
 6. Can the model provide interpretable outputs for compliance and audit purposes?
 
-## ✅ Success Criteria
+## Success Criteria
 
 - **Recall (Fraud Class)** ≥ 90%
 - **Precision (Fraud Class)** ≥ 70%
@@ -34,17 +34,17 @@ Credit card fraud is a persistent issue in the financial industry, costing billi
 - Stable model performance across validation folds.
 - Potential to reduce financial losses and customer disruptions.
 
-## 📦 Dataset
+## Dataset
 
 The dataset used consists of **442,171** transaction records with 24 columns, including transaction amounts, locations, merchant details, and fraud labels.
 
-## 📊 Exploratory Data Analysis
+## Exploratory Data Analysis
 
 - Univariate, Bivariate, and Multivariate Analysis.
 - Visualizations: Boxplots, Violin Plots, Histograms, Scatterplots, Heatmaps, Pairplots.
 - Discovered significant class imbalance: **fraudulent transactions ≈ 0.6%**.
 
-## 🛠️ Data Preprocessing
+##  Data Preprocessing
 
 - Handled missing values and outliers.
 - Feature engineering: time-based features, transaction frequency, z-scores per user, geographic distance.
@@ -53,7 +53,7 @@ The dataset used consists of **442,171** transaction records with 24 columns, in
 - Feature scaling using `StandardScaler` and `MinMaxScaler`.
 - Dimensionality reduction with PCA for visualization.
 
-## 📈 Modeling Approach
+##  Modeling Approach
 
 Models evaluated:
 
@@ -63,7 +63,7 @@ Models evaluated:
 
 Class imbalance was addressed using **SMOTE** and **cost-sensitive learning** via class weights.
 
-## 📊 Model Performance Summary
+##  Model Performance Summary
 
 | Model                | Precision (Fraud) | Recall (Fraud) | AUC-ROC |
 |:---------------------|:----------------|:--------------|:--------|
@@ -71,21 +71,16 @@ Class imbalance was addressed using **SMOTE** and **cost-sensitive learning** vi
 | Decision Tree        | 0.54             | 0.54          | 0.7701  |
 | Random Forest        | 0.67             | 0.48          | 0.9232  |
 | Neural Network       | 0.48             | 0.60          | 0.8844  |
+| XGBoost Classifier   | 0.63             | 0.68          | 0.9306  |
 
-## 📌 Key Insights
+## Key Insights
 
 - Large transaction amounts alone aren’t reliable fraud indicators.
 - Fraudulent transactions tend to cluster during late-night hours and weekends.
 - SMOTE combined with cost-sensitive models improved fraud recall substantially.
 
-## 📎 Link to Colab Notebook
 
-👉 [Project Colab Notebook](https://colab.research.google.com/drive/1VwtYPys4VPuHsnDhrK2QocSfH7R6B2vs?usp=sharing)
-
-
----
-
-## 📊 Conclusion
+##  Conclusion
 
 The project successfully established a framework for detecting credit card fraud using machine learning, addressing the key objective of analyzing transaction data to identify potential fraud. Two machine learning models — **Random Forest** and **XGBoost** — were developed and evaluated, with techniques like **SMOTE** used to handle class imbalance.
 
@@ -100,43 +95,43 @@ In summary, the project achieved its core objective of building and evaluating m
 
 ---
 
-## 📌 Recommendations
+##  Recommendations
 
 To improve the credit card fraud detection system and better meet the project objectives, the following recommendations are proposed:
 
-### 🔧 Feature Engineering Enhancement
+###  Feature Engineering Enhancement
 
 - **Temporal Features**: Create transaction frequency features over time windows (e.g., last 1 hour, 24 hours, 7 days) per cardholder and merchant.
 - **Behavioral Patterns**: Capture deviations from a cardholder's typical behavior (unusual amounts, locations, or merchants).
 - **Aggregated Features**: Aggregate transaction amounts, counts, and unique merchants within timeframes.
 
-### ⚖️ Advanced Imbalance Handling Techniques
+###  Advanced Imbalance Handling Techniques
 
 - Explore oversampling techniques like **ADASYN** and **Borderline-SMOTE**, or undersampling methods like **NearMiss**.
 - Investigate **cost-sensitive learning** where different misclassification penalties are applied to false positives and false negatives.
 
-### 🛠️ Model Optimization and Hyperparameter Tuning
+###  Model Optimization and Hyperparameter Tuning
 
 - Perform exhaustive hyperparameter tuning for XGBoost (e.g., GridSearchCV or RandomizedSearchCV).
 - Explore advanced boosting and ensemble methods for potential performance gains.
 
-### 🎚️ Threshold Adjustment
+###  Threshold Adjustment
 
 - Analyze the **precision-recall curve** and **ROC curve** for XGBoost.
 - Adjust classification thresholds to optimize for higher recall or desired business trade-offs.
 
-### 🤖 Explore Deep Learning Models
+###  Explore Deep Learning Models
 
 - Investigate neural network architectures (MLPs, RNNs for sequential data, Autoencoders for anomaly detection) to learn complex fraud patterns.
 
-### ⚙️ Real-time Implementation Considerations
+### Real-time Implementation Considerations
 
 - Evaluate computational efficiency and latency for potential real-time deployment.
 - Consider streaming data frameworks if real-time fraud detection is a business priority.
 
 ---
 
-## 📈 Final Model Performance Summary
+##  Final Model Performance Summary
 
 | Model                | Precision (Fraud) | Recall (Fraud) | AUC-ROC |
 |:---------------------|:----------------|:--------------|:--------|
@@ -145,7 +140,7 @@ To improve the credit card fraud detection system and better meet the project ob
 
 ---
 
-## 🏆 Performance Analysis and Best Model
+##  Performance Analysis and Best Model
 
 Considering the technical success criteria:
 
